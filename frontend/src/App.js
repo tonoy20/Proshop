@@ -43,12 +43,14 @@ const App = () => {
             <Route path='/admin/product/:id/edit' element={<ProductEditScreen />} />
             <Route path='/admin/orderlist' element={<OrderListScreen />} />
 
-            <Route path='/' exact element={<HomeScreen />} />
+            <Route path='/search/:keyword' element={<HomeScreen />} />
+
+            <Route path='/' element={<HomeScreen />} exact />
           </Routes>
         </Container>
       </main>
       <Footer />
-    </Router>
+    </Router >
   );
 }
 
