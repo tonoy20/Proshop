@@ -5,6 +5,7 @@ import { Row, Col, Image, Button, Card, ListGroup, Form, ListGroupItem } from 'r
 import Rating from '../components/Rating';
 import Message from '../components/Message';
 import Loader from '../components/Loader';
+import Meta from '../components/Meta';
 import {
     listProductDetails,
     createProductReview
@@ -68,6 +69,7 @@ const ProductScreen = ({ match }) => {
             {loading ?
                 <Loader /> : error ? <Message variant='danger'>{error}</Message> : (
                     <>
+                        <Meta title={product.name} />
                         <Row>
                             <Col md={6}>
                                 <Image src={product.image} alt={product.name} fluid />
